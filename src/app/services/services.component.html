@@ -1,0 +1,435 @@
+<!-- Domestic Modal -->
+<div class="container">
+  <ng-template #content let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title">Domestic help</h4>
+      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+          <!-- Modal body -->
+          <div class="modal-body">
+            <form action="" method="post">
+              <div class="form-row align-items-center">
+                <div class="col-auto">
+                  <label class="mr-sm-2" for="inlineFormCustomSelect">Choose type of work</label>
+                  <select class="custom-select mr-sm-2" name="type_of_work" required>
+                    <option disabled>Please Choose...</option>
+                    <option value="Cooking">Cooking</option>
+                    <option value="Babysitters">Babysitters</option>
+                    <option value="Gardeners">Gardeners</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group text">
+                <label for="Price">Your bid price</label>
+                <input type="text" class="form-control" placeholder="2500 tg" name="cost" required>
+              </div>
+              <div class="form-group text">
+                <label for="Comments">Your comments</label>
+                <textarea class="form-control" rows="3" name="comments"></textarea>
+              </div>
+              <div class="col-auto" id="submit-button">
+                <button type="submit" class="btn btn-primary" name="sbm">Submit</button>
+              </div>
+			      </form>
+          </div>
+  </ng-template>
+    <!-- HouseHold Repair Modal -->
+    <ng-template #content1 let-modal>
+      <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title">HouseHold Repair</h4>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+          <!-- Modal body -->
+          <div class="modal-body">
+            <form action="" method="post">
+              <div class="form-row align-items-center">
+                <div class="col-auto">
+                  <label class="mr-sm-2" for="inlineFormCustomSelect">Choose type of work</label>
+                  <select class="custom-select mr-sm-2" name="type_of_work" required>
+                    <option disabled>Please Choose...</option>
+                    <option value="Plumbers">Plumbers</option>
+                    <option value="Electricians">Electricians</option>
+                    <option value="Weldeers">Welders</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group text">
+                <label for="Price">Your bid price</label>
+                <input type="text" class="form-control" placeholder="2500 tg" name="cost" required>
+              </div>
+              <div class="form-group text">
+                <label for="Comments">Your comments</label>
+                <textarea class="form-control" rows="3" name="comments"></textarea>
+              </div>
+              <div class="col-auto" id="submit-button">
+                  <button type="submit" class="btn btn-primary" name="sbm">Submit</button>
+              </div>
+			      </form>
+    </div>
+  </ng-template>
+    <!-- Interior finish Modal -->
+    <div class="modal fade" id="interior-finish-modal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h4 class="modal-title">Interior finish</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <!-- Modal body -->
+          <div class="modal-body">
+            <form action="" method="post">
+              <div class="form-row align-items-center">
+                <div class="col-auto">
+                  <label class="mr-sm-2" for="inlineFormCustomSelect">Choose type of work</label>
+                  <select class="custom-select mr-sm-2" name="type_of_work" required>
+                    <option disabled>Please Choose...</option>
+                    <option value="Plasters">Plasters</option>
+                    <option value="Painters">Painters</option>
+                    <option value="Tilers">Tilers</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group text">
+                <label for="Price">Your bid price</label>
+                <input type="text" class="form-control" placeholder="2500 tg" name="cost" required>
+              </div>
+              <div class="form-group text">
+                <label for="Comments">Your comments</label>
+                <textarea class="form-control" rows="3" name="comments"></textarea>
+              </div>
+              <div class="col-auto" id="submit-button">
+                <button type="submit" class="btn btn-primary" name="sbm">Submit</button>
+              </div>
+            </form>
+          </div>
+        </div>
+	    </div>
+    </div>
+    <!-- Machinery and equipment Modal -->
+    <div class="modal fade" id="machinery-equipment-modal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h4 class="modal-title">Machinery and equipment</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <!-- Modal body -->
+          <div class="modal-body">
+            <form action="" method="post">
+              <div class="form-row align-items-center">
+                <div class="col-auto">
+                  <label class="mr-sm-2" for="inlineFormCustomSelect">Choose type of work</label>
+                  <select class="custom-select mr-sm-2" name="type_of_work" required>
+                    <option disabled>Please Choose...</option>
+                    <option value="HouseHold">HouseHold</option>
+                    <option value="Computer">Computer</option>
+                    <option value="Security">Security</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group text">
+                <label for="Price">Your bid price</label>
+                <input type="text" class="form-control" placeholder="2500 tg" name="cost" required>
+              </div>
+              <div class="form-group text">
+                <label for="Comments">Your comments</label>
+                <textarea class="form-control" rows="3" name="comments"></textarea>
+              </div>
+              <div class="col-auto" id="submit-button">
+                <button type="submit" class="btn btn-primary" name="sbm">Submit</button>
+              </div>
+            </form>
+          </div>
+        </div>
+	    </div>
+    </div>
+    <!-- Shipping and Delivery Modal -->
+    <div class="modal fade" id="shipping-delivery-modal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h4 class="modal-title">Shipping and Delivery</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <!-- Modal body -->
+          <div class="modal-body">
+            <form action="" method="post">
+              <div class="form-row align-items-center">
+                <div class="col-auto">
+                  <label class="mr-sm-2" for="inlineFormCustomSelect">Choose type of work</label>
+                  <select class="custom-select mr-sm-2" name="type_of_work" required>
+                      <option disabled>Please Choose...</option>
+                      <option value="Gazelles">Gazellles</option>
+                      <option value="Couriers">Couriers</option>
+                      <option value="Loaders">Loaders</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group text">
+                <label for="Price">Your bid price</label>
+                <input type="text" class="form-control" placeholder="2500 tg" name="cost" required>
+              </div>
+              <div class="form-group text">
+                <label for="Comments">Your comments</label>
+                <textarea class="form-control" rows="3" name="comments"></textarea>
+              </div>
+              <div class="col-auto" id="submit-button">
+                <button type="submit" class="btn btn-primary" name="sbm">Submit</button>
+              </div>
+            </form>
+          </div>
+        </div>
+	    </div>
+    </div>
+    <!-- Building Modal -->
+    <div class="modal fade" id="building-modal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h4 class="modal-title">Building</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <!-- Modal body -->
+          <div class="modal-body">
+            <form action="" method="post">
+              <div class="form-row align-items-center">
+                <div class="col-auto">
+                  <label class="mr-sm-2" for="inlineFormCustomSelect">Choose type of work</label>
+                  <select class="custom-select mr-sm-2" name="type_of_work" required>
+                    <option disabled>Please Choose...</option>
+                    <option value="Welders">Welders</option>
+                    <option value="Workers">Workers</option>
+                    <option value="Roofers">Roofers</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group text">
+                <label for="Price">Your bid price</label>
+                <input type="text" class="form-control" placeholder="2500 tg" name="cost" required>
+              </div>
+              <div class="form-group text">
+                <label for="Comments">Your comments</label>
+                <textarea class="form-control" rows="3" name="comments"></textarea>
+              </div>
+              <div class="col-auto" id="submit-button">
+                <button type="submit" class="btn btn-primary" name="sbm">Submit</button>
+              </div>
+            </form>
+          </div>
+        </div>
+	    </div>
+    </div>
+    <!-- IT and freelance Modal -->
+    <div class="modal fade" id="it-freelance-modal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h4 class="modal-title">IT and freelance</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <!-- Modal body -->
+          <div class="modal-body">
+            <form action="" method="post">
+              <div class="form-row align-items-center">
+                <div class="col-auto">
+                  <label class="mr-sm-2" for="inlineFormCustomSelect">Choose type of work</label>
+                  <select class="custom-select mr-sm-2" name="type_of_work" required>
+                    <option disabled>Please Choose...</option>
+                    <option value="Developers">Developers</option>
+                    <option value="Designers">Designers</option>
+                    <option value="Photographers">Photographers</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group text">
+                <label for="Price">Your bid price</label>
+                <input type="text" class="form-control" placeholder="2500 tg" name="cost" required>
+              </div>
+              <div class="form-group text">
+                <label for="Comments">Your comments</label>
+                <textarea class="form-control" rows="3" name="comments"></textarea>
+              </div>
+              <div class="col-auto" id="submit-button">
+                <button type="submit" class="btn btn-primary" name="sbm">Submit</button>
+              </div>
+            </form>
+          </div>
+        </div>
+	    </div>
+    </div>
+    <!-- Health and beauty Modal -->
+    <div class="modal fade" id="health-beauty-modal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h4 class="modal-title">Health and beauty</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <!-- Modal body -->
+          <div class="modal-body">
+            <form action="" method="post">
+              <div class="form-row align-items-center">
+                <div class="col-auto">
+                  <label class="mr-sm-2" for="inlineFormCustomSelect">Choose type of work</label>
+                  <select class="custom-select mr-sm-2" name="type_of_work" required>
+                    <option disabled>Please Choose...</option>
+                    <option value="Massage">Massage</option>
+                    <option value="Hair removal">Hair removal</option>
+                    <option value="Nails">Nails</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group text">
+                <label for="Price">Your bid price</label>
+                <input type="text" class="form-control" placeholder="2500 tg" name="cost" required>
+              </div>
+              <div class="form-group text">
+                <label for="Comments">Your comments</label>
+                <textarea class="form-control" rows="3" name="comments"></textarea>
+              </div>
+              <div class="col-auto" id="submit-button">
+                <button type="submit" class="btn btn-primary" name="sbm">Submit</button>
+              </div>
+            </form>
+          </div>
+        </div>
+	    </div>
+    </div>
+    <!-- Business services Modal -->
+    <div class="modal fade" id="business-services-modal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h4 class="modal-title">Business services</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <!-- Modal body -->
+          <div class="modal-body">
+            <form action="" method="post">
+              <div class="form-row align-items-center">
+                <div class="col-auto">
+                  <label class="mr-sm-2" for="inlineFormCustomSelect">Choose type of work</label>
+                  <select class="custom-select mr-sm-2" name="type_of_work" required>
+                    <option disabled>Please Choose...</option>
+                    <option value="Accountants">Accountants</option>
+                    <option value="Lawyers">Lawyers</option>
+                    <option value="Managers">Managers</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group text">
+                <label for="Price">Your bid price</label>
+                <input type="text" class="form-control" placeholder="2500 tg" name="cost" required>
+              </div>
+              <div class="form-group text">
+                <label for="Comments">Your comments</label>
+                <textarea class="form-control" rows="3" name="comments"></textarea>
+              </div>
+              <div class="col-auto" id="submit-button">
+                <button type="submit" class="btn btn-primary" name="sbm">Submit</button>
+              </div>
+            </form>
+          </div>
+        </div>
+	    </div>
+    </div>
+	</div>  
+  <div id="mainPart">
+    <div id="all-services">
+      <h3>All Services</h3>
+	      <div class="row services-list">
+          <div class="col-sm-6 col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Domestic help</h5>
+                <p class="card-text">Cleaning, dry cleaning, gardeners, etc.</p>
+                <a  class="btn btn-primary" (click)="open(content)" style="color: white;">Make Request</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Household repair</h5>
+                <p class="card-text">Plumbers, electricians and welders, etc.</p>
+                <a class="btn btn-primary" (click)="open(content1)" style="color: white;">Make Request</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Interior finish</h5>
+                <p class="card-text">Plasters, painters, tile builders and tilers, etc.</p>
+                <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#interior-finish-modal">Make Request</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Machinery and equipment</h5>
+                <p class="card-text">Household, computer, alarm and security, etc.</p>
+                <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#machinery-equipment-modal">Make Request</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Shipping and Delivery</h5>
+                <p class="card-text">Gazelles, couriers, loaders and garbage collection, etc.</p>
+                <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#shipping-delivery-modal">Make Request</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Building</h5>
+                <p class="card-text">Welders, workers, roofers and bricklayers, etc.</p>
+                <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#building-modal">Make Request</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">IT and freelance</h5>
+                <p class="card-text">Developers, designers, smm, photographers, etc</p>
+                <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#it-freelance-modal">Make Request</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Health and beauty</h5>
+                <p class="card-text">Massage, hair removal, care for eyebrows, nails, etc.</p>
+                <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#health-beauty-modal">Make Request</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Business services</h5>
+                <p class="card-text">Accountants, lawyers, insurers and managers, etc.</p>
+                <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#business-services-modal">Make Request</a>
+              </div>
+            </div>
+          </div>
+	      </div>
+	  </div>
+	</div>

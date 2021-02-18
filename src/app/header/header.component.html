@@ -1,0 +1,56 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <span class="navbar-brand mb-0 h1"><a class="navbar-brand" href="#mainPage" id="logo-button">Do All</a></span>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+          <a class="nav-link" href="#all-services" id="service-button">All Services</a>
+          </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contacts" id="contact-button">Contacts</a>
+          </li>
+          <li class="nav-item">
+          <a class="nav-link" href="#" id="For-Specialists-button">For-Specialists</a>
+          </li>
+      </ul>
+      <!-- <div class="nav-link">
+        <div class="custom-control custom-switch">
+          <input type="checkbox" class="custom-control-input" id="darkSwitch" ">
+          <label for="darkSwitch" class="custom-control-label">Dark Mode</label>
+        </div>
+      </div> -->
+      <a class="btn btn-outline-primary" (click)="open(content)" style="cursor: pointer; color: blue;">
+      <i class="far fa-user"></i> My Profile</a>>
+    </div>
+</nav>
+<div class="container">
+    <div class="images mt-5 mb-0">
+  <img src="image.png" class="img-fluid" id="mainImage"/>
+</div>
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Sign in</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form action="" method="post">
+      <div class="form-group">
+        <label for="exampleInputEmail1">Email address</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="email">
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Password</label>
+        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="password">
+      </div> 
+      <button type="submit" class="btn btn-outline-primary">Enter</button>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <a href="#">Create an account</a>
+  </div>
+</ng-template>

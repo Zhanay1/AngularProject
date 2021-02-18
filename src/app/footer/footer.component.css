@@ -1,0 +1,20 @@
+.bg-light {
+    background-color: #fff;
+  }
+  .services-list {
+    width: 70%;
+    margin: auto;
+  }
+  .footer-text {
+    color: #3d3d3d;
+  }
+  .footer-heading {
+    color: white;
+  }
+  h2 {
+    text-align: center;
+    margin-bottom: 1%;
+    margin-top: 1%;
+  }
+
+  
