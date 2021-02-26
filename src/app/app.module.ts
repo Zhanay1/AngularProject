@@ -9,6 +9,9 @@ import { ServicesComponent } from './services/services.component';
 import { AnswerComponent } from './answer/answer.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {NgbModalModule} from '@ng-bootstrap/ng-bootstrap';
+import {routes} from "./app.route";
+import { RouterModule } from '@angular/router';
+import { ForSpecialistsComponent } from './for-specialists/for-specialists.component';
 
 @NgModule({
   declarations: [
@@ -16,12 +19,14 @@ import {NgbModalModule} from '@ng-bootstrap/ng-bootstrap';
     HeaderComponent,
     FooterComponent,
     ServicesComponent,
-    AnswerComponent
+    AnswerComponent,
+    ForSpecialistsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]
