@@ -12,6 +12,7 @@ import {NgbModalModule} from '@ng-bootstrap/ng-bootstrap';
 import {routes} from "./app.route";
 import { RouterModule } from '@angular/router';
 import { ForSpecialistsComponent } from './for-specialists/for-specialists.component';
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { ForSpecialistsComponent } from './for-specialists/for-specialists.compo
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

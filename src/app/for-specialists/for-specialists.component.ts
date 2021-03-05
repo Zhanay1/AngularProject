@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {Service} from '../services/service';
+import {SpecialistService} from '../services/specialist.service';
 
 @Component({
   selector: 'app-for-specialists',
@@ -6,10 +8,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./for-specialists.component.css']
 })
 export class ForSpecialistsComponent implements OnInit {
+  constructor(private specialistService: SpecialistService) {
+  }
 
-  constructor() { }
+  services: Service = this.specialistService.getService();
 
   ngOnInit(): void {
   }
+
 
 }

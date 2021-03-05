@@ -13,7 +13,7 @@
               <div class="form-row align-items-center">
                 <div class="col-auto">
                   <label class="mr-sm-2" for="inlineFormCustomSelect">Choose type of work</label>
-                  <select class="custom-select mr-sm-2" name="type_of_work" required>
+                  <select class="custom-select mr-sm-2" name="type_of_work" [(ngModel)]="services.typeOfWork" required>
                     <option disabled>Please Choose...</option>
                     <option value="Cooking">Cooking</option>
                     <option value="Babysitters">Babysitters</option>
@@ -23,14 +23,14 @@
               </div>
               <div class="form-group text">
                 <label for="Price">Your bid price</label>
-                <input type="text" class="form-control" placeholder="2500 tg" name="cost" required>
+                <input type="text" class="form-control" placeholder="2500 tg" name="cost" [(ngModel)]="services.price" required>
               </div>
               <div class="form-group text">
                 <label for="Comments">Your comments</label>
-                <textarea class="form-control" rows="3" name="comments"></textarea>
+                <textarea class="form-control" rows="3" name="comments" [(ngModel)]="services.comments"></textarea>
               </div>
               <div class="col-auto" id="submit-button">
-                <button type="submit" class="btn btn-primary" name="sbm"  >Submit</button>
+                <button type="submit" class="btn btn-primary" name="sbm" (click)="sendServices()" >Submit</button>
               </div>
 			      </form>
           </div>
@@ -344,7 +344,7 @@
         </div>
 	    </div>
     </div>
-	</div>  
+	</div>
   <div id="mainPart">
     <div id="all-services">
       <h3>All Services</h3>
