@@ -25,10 +25,10 @@
       <i class="far fa-user"></i> My Profile</a>
     </div>
 </nav>
-<div class="container">
-    <div class="images mt-5 mb-0">
-  <img src="image.png" class="img-fluid" id="mainImage"/>
-</div>
+<div class="container" >
+    <div class="images mt-5 mb-0" *ngIf="check" >
+      <img src="assets/image.png" class="img-fluid" id="mainImage" />
+    </div>
 <ng-template #content let-modal>
   <div class="modal-header">
     <h4 class="modal-title" id="modal-basic-title">Sign in</h4>

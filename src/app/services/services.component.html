@@ -23,15 +23,20 @@
               </div>
               <div class="form-group text">
                 <label for="Price">Your bid price</label>
-                <input type="text" class="form-control" placeholder="2500 tg" name="cost" [(ngModel)]="services.price" required>
+                <input type="number" class="form-control" placeholder="2500 tg" name="cost" [(ngModel)]="services.price" required>
               </div>
               <div class="form-group text">
                 <label for="Comments">Your comments</label>
                 <textarea class="form-control" rows="3" name="comments" [(ngModel)]="services.comments"></textarea>
               </div>
+              <div class="form-group text">
+                <label for="Date">Your date</label>
+                <input type="date" class="form-control" name="cost" [(ngModel)]="services.date" required>              
+              </div>
               <div class="col-auto" id="submit-button">
                 <button type="submit" class="btn btn-primary" name="sbm" (click)="sendServices()" >Submit</button>
               </div>
+
 			      </form>
           </div>
   </ng-template>
@@ -66,7 +71,7 @@
                 <textarea class="form-control" rows="3" name="comments"></textarea>
               </div>
               <div class="col-auto" id="submit-button">
-                  <button type="submit" class="btn btn-primary" name="sbm">Submit</button>
+                  <button type="submit" class="btn btn-primary" name="sbm" (click)="sendServices()">Submit</button>
               </div>
 			      </form>
     </div>

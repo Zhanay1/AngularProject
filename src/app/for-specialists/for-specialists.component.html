@@ -1,9 +1,10 @@
 <div class="col-sm-6 col-md-12 top-cards">
   <div class="card">
     <div class="card-body">
-      <h5 class="card-title">Type of work: {{services.typeOfWork}}</h5>
-      <p class="card-text">Comment: {{services.comments}}</p>
-      <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#domestic-modal"><span>Cost: {{services.price}}</span> </a>
+      <h5 class="card-title">Type of work: {{services.typeOfWork | uppercase}}</h5>
+      <p class="card-text">Comment: {{services.comments | lowercase}}</p>
+      <p class="card-text">Date: {{services.date | date}}</p>
+      <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#domestic-modal"><span>Cost: {{services.price | discount:firstClient:defaultClient}}</span> </a>
     </div>
   </div>
 </div> 

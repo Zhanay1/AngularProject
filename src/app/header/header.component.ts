@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Route, Router } from '@angular/router';
 import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
@@ -9,8 +10,9 @@ import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 export class HeaderComponent implements OnInit {
   closeResult = '';
   imageSrc = "image.png";
+  check: boolean = true;
 
-  constructor(private modalService: NgbModal) { }
+  constructor(private modalService: NgbModal, private route: Router) { }
 
   open(content: any) {
     this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {
@@ -32,6 +34,11 @@ export class HeaderComponent implements OnInit {
 
 
   ngOnInit(): void {
+    console.log()
+    if(this.route.url === "/for-specialists"){
+      this.check = false
+      console.log(this.check)
+    }
   }
 
 }

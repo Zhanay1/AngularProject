@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import { ActivatedRoute, Route, Router } from '@angular/router';
 import {Service} from '../services/service';
 import {SpecialistService} from '../services/specialist.service';
 
@@ -8,7 +9,11 @@ import {SpecialistService} from '../services/specialist.service';
   styleUrls: ['./for-specialists.component.css']
 })
 export class ForSpecialistsComponent implements OnInit {
-  constructor(private specialistService: SpecialistService) {
+
+  firstClient:boolean = true
+  defaultClient:boolean = false
+  
+  constructor(private specialistService: SpecialistService ) {
   }
 
   services: Service = this.specialistService.getService();
