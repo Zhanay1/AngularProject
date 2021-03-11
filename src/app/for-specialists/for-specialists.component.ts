@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import { ActivatedRoute, Route, Router } from '@angular/router';
+// import { LoggingService } from '../logging.service';
 import {Service} from '../services/service';
-import {SpecialistService} from '../services/specialist.service';
+import {SpecialistService} from '../specialist.service';
 
 @Component({
   selector: 'app-for-specialists',
@@ -13,12 +13,17 @@ export class ForSpecialistsComponent implements OnInit {
   firstClient:boolean = true
   defaultClient:boolean = false
   
-  constructor(private specialistService: SpecialistService ) {
+  constructor(private specialistService: SpecialistService, 
+              // private loggingService: LoggingService 
+              ) {
   }
 
-  services: Service = this.specialistService.getService();
+  services: Service[] = []
 
   ngOnInit(): void {
+    this.services = this.specialistService.getService();
+    // this.loggingService.log('get services in for-specialists.components.ts')
+    console.log(this.services)
   }
 
 

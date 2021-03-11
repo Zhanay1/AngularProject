@@ -1,5 +1,8 @@
 <!-- Domestic Modal -->
 <div class="container">
+  <div class="images mt-5 mb-0">
+    <img src="assets/image.png" class="img-fluid" id="mainImage" />
+  </div>
   <ng-template #content let-modal>
     <div class="modal-header">
       <h4 class="modal-title" id="modal-basic-title">Domestic help</h4>
@@ -31,12 +34,11 @@
               </div>
               <div class="form-group text">
                 <label for="Date">Your date</label>
-                <input type="date" class="form-control" name="cost" [(ngModel)]="services.date" required>              
+                <input type="date" class="form-control" name="date" [(ngModel)]="services.date" required>              
               </div>
               <div class="col-auto" id="submit-button">
-                <button type="submit" class="btn btn-primary" name="sbm" (click)="sendServices()" >Submit</button>
+                <input type="submit" class="btn btn-primary" name="sbm"  (click)="modal.dismiss('Cross click')" (click)="sendServices()" value="Submit" >
               </div>
-
 			      </form>
           </div>
   </ng-template>
@@ -54,7 +56,7 @@
               <div class="form-row align-items-center">
                 <div class="col-auto">
                   <label class="mr-sm-2" for="inlineFormCustomSelect">Choose type of work</label>
-                  <select class="custom-select mr-sm-2" name="type_of_work" required>
+                  <select class="custom-select mr-sm-2" name="type_of_work" [(ngModel)]="services.typeOfWork" required>
                     <option disabled>Please Choose...</option>
                     <option value="Plumbers">Plumbers</option>
                     <option value="Electricians">Electricians</option>
@@ -64,34 +66,38 @@
               </div>
               <div class="form-group text">
                 <label for="Price">Your bid price</label>
-                <input type="text" class="form-control" placeholder="2500 tg" name="cost" required>
+                <input type="text" class="form-control" placeholder="2500 tg" name="cost" [(ngModel)]="services.price" required>
               </div>
               <div class="form-group text">
                 <label for="Comments">Your comments</label>
-                <textarea class="form-control" rows="3" name="comments"></textarea>
+                <textarea class="form-control" rows="3" name="comments" [(ngModel)]="services.comments"></textarea>
+              </div>
+              <div class="form-group text">
+                <label for="Date">Your date</label>
+                <input type="date" class="form-control" name="date" [(ngModel)]="services.date" required>              
               </div>
               <div class="col-auto" id="submit-button">
-                  <button type="submit" class="btn btn-primary" name="sbm" (click)="sendServices()">Submit</button>
+                <input type="submit" class="btn btn-primary" name="sbm"  (click)="modal.dismiss('Cross click')" (click)="sendServices()" value="Submit" >
               </div>
 			      </form>
     </div>
   </ng-template>
     <!-- Interior finish Modal -->
-    <div class="modal fade" id="interior-finish-modal">
-      <div class="modal-dialog">
-        <div class="modal-content">
+    <ng-template #content2 let-modal> 
           <!-- Modal Header -->
           <div class="modal-header">
             <h4 class="modal-title">Interior finish</h4>
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-          </div>
+            <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
           <!-- Modal body -->
           <div class="modal-body">
             <form action="" method="post">
               <div class="form-row align-items-center">
                 <div class="col-auto">
                   <label class="mr-sm-2" for="inlineFormCustomSelect">Choose type of work</label>
-                  <select class="custom-select mr-sm-2" name="type_of_work" required>
+                  <select class="custom-select mr-sm-2" name="type_of_work" [(ngModel)]="services.typeOfWork" required>
                     <option disabled>Please Choose...</option>
                     <option value="Plasters">Plasters</option>
                     <option value="Painters">Painters</option>
@@ -101,28 +107,30 @@
               </div>
               <div class="form-group text">
                 <label for="Price">Your bid price</label>
-                <input type="text" class="form-control" placeholder="2500 tg" name="cost" required>
+                <input type="text" class="form-control" placeholder="2500 tg" name="cost" [(ngModel)]="services.price" required>
               </div>
               <div class="form-group text">
                 <label for="Comments">Your comments</label>
-                <textarea class="form-control" rows="3" name="comments"></textarea>
+                <textarea class="form-control" rows="3" name="comments" [(ngModel)]="services.comments"></textarea>
+              </div>
+              <div class="form-group text">
+                <label for="Date">Your date</label>
+                <input type="date" class="form-control" name="date" [(ngModel)]="services.date" required>              
               </div>
               <div class="col-auto" id="submit-button">
-                <button type="submit" class="btn btn-primary" name="sbm">Submit</button>
+                <input type="submit" class="btn btn-primary" name="sbm"  (click)="modal.dismiss('Cross click')" (click)="sendServices()" value="Submit" >
               </div>
             </form>
           </div>
-        </div>
-	    </div>
-    </div>
+      </ng-template>
     <!-- Machinery and equipment Modal -->
-    <div class="modal fade" id="machinery-equipment-modal">
-      <div class="modal-dialog">
-        <div class="modal-content">
+    <ng-template #content3 let-modal>
           <!-- Modal Header -->
           <div class="modal-header">
             <h4 class="modal-title">Machinery and equipment</h4>
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+              <span aria-hidden="true">&times;</span>
+            </button>
           </div>
           <!-- Modal body -->
           <div class="modal-body">
@@ -130,7 +138,7 @@
               <div class="form-row align-items-center">
                 <div class="col-auto">
                   <label class="mr-sm-2" for="inlineFormCustomSelect">Choose type of work</label>
-                  <select class="custom-select mr-sm-2" name="type_of_work" required>
+                  <select class="custom-select mr-sm-2" name="type_of_work" [(ngModel)]="services.typeOfWork" required>
                     <option disabled>Please Choose...</option>
                     <option value="HouseHold">HouseHold</option>
                     <option value="Computer">Computer</option>
@@ -140,28 +148,30 @@
               </div>
               <div class="form-group text">
                 <label for="Price">Your bid price</label>
-                <input type="text" class="form-control" placeholder="2500 tg" name="cost" required>
+                <input type="text" class="form-control" placeholder="2500 tg" name="cost" [(ngModel)]="services.price" required>
               </div>
               <div class="form-group text">
                 <label for="Comments">Your comments</label>
-                <textarea class="form-control" rows="3" name="comments"></textarea>
+                <textarea class="form-control" rows="3" name="comments" [(ngModel)]="services.comments"></textarea>
+              </div>
+              <div class="form-group text">
+                <label for="Date">Your date</label>
+                <input type="date" class="form-control" name="date" [(ngModel)]="services.date" required>              
               </div>
               <div class="col-auto" id="submit-button">
-                <button type="submit" class="btn btn-primary" name="sbm">Submit</button>
+                <input type="submit" class="btn btn-primary" name="sbm"  (click)="modal.dismiss('Cross click')" (click)="sendServices()" value="Submit" >
               </div>
             </form>
           </div>
-        </div>
-	    </div>
-    </div>
+        </ng-template>
     <!-- Shipping and Delivery Modal -->
-    <div class="modal fade" id="shipping-delivery-modal">
-      <div class="modal-dialog">
-        <div class="modal-content">
+    <ng-template #content4 let-modal>
           <!-- Modal Header -->
           <div class="modal-header">
             <h4 class="modal-title">Shipping and Delivery</h4>
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+              <span aria-hidden="true">&times;</span>
+            </button>
           </div>
           <!-- Modal body -->
           <div class="modal-body">
@@ -169,7 +179,7 @@
               <div class="form-row align-items-center">
                 <div class="col-auto">
                   <label class="mr-sm-2" for="inlineFormCustomSelect">Choose type of work</label>
-                  <select class="custom-select mr-sm-2" name="type_of_work" required>
+                  <select class="custom-select mr-sm-2" name="type_of_work" [(ngModel)]="services.typeOfWork" required>
                       <option disabled>Please Choose...</option>
                       <option value="Gazelles">Gazellles</option>
                       <option value="Couriers">Couriers</option>
@@ -179,28 +189,30 @@
               </div>
               <div class="form-group text">
                 <label for="Price">Your bid price</label>
-                <input type="text" class="form-control" placeholder="2500 tg" name="cost" required>
+                <input type="text" class="form-control" placeholder="2500 tg" name="cost" [(ngModel)]="services.price" required>
               </div>
               <div class="form-group text">
                 <label for="Comments">Your comments</label>
-                <textarea class="form-control" rows="3" name="comments"></textarea>
+                <textarea class="form-control" rows="3" name="comments" [(ngModel)]="services.comments"></textarea>
+              </div>
+              <div class="form-group text">
+                <label for="Date">Your date</label>
+                <input type="date" class="form-control" name="date" [(ngModel)]="services.date" required>              
               </div>
               <div class="col-auto" id="submit-button">
-                <button type="submit" class="btn btn-primary" name="sbm">Submit</button>
+                <input type="submit" class="btn btn-primary" name="sbm"  (click)="modal.dismiss('Cross click')" (click)="sendServices()" value="Submit" >
               </div>
             </form>
           </div>
-        </div>
-	    </div>
-    </div>
+        </ng-template>
     <!-- Building Modal -->
-    <div class="modal fade" id="building-modal">
-      <div class="modal-dialog">
-        <div class="modal-content">
+    <ng-template #content5 let-modal>
           <!-- Modal Header -->
           <div class="modal-header">
             <h4 class="modal-title">Building</h4>
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+              <span aria-hidden="true">&times;</span>
+            </button>
           </div>
           <!-- Modal body -->
           <div class="modal-body">
@@ -208,7 +220,7 @@
               <div class="form-row align-items-center">
                 <div class="col-auto">
                   <label class="mr-sm-2" for="inlineFormCustomSelect">Choose type of work</label>
-                  <select class="custom-select mr-sm-2" name="type_of_work" required>
+                  <select class="custom-select mr-sm-2" name="type_of_work" [(ngModel)]="services.typeOfWork" required>
                     <option disabled>Please Choose...</option>
                     <option value="Welders">Welders</option>
                     <option value="Workers">Workers</option>
@@ -218,28 +230,30 @@
               </div>
               <div class="form-group text">
                 <label for="Price">Your bid price</label>
-                <input type="text" class="form-control" placeholder="2500 tg" name="cost" required>
+                <input type="text" class="form-control" placeholder="2500 tg" name="cost" [(ngModel)]="services.price" required>
               </div>
               <div class="form-group text">
                 <label for="Comments">Your comments</label>
-                <textarea class="form-control" rows="3" name="comments"></textarea>
+                <textarea class="form-control" rows="3" name="comments" [(ngModel)]="services.comments"></textarea>
+              </div>
+              <div class="form-group text">
+                <label for="Date">Your date</label>
+                <input type="date" class="form-control" name="date" [(ngModel)]="services.date" required>              
               </div>
               <div class="col-auto" id="submit-button">
-                <button type="submit" class="btn btn-primary" name="sbm">Submit</button>
+                <input type="submit" class="btn btn-primary" name="sbm"  (click)="modal.dismiss('Cross click')" (click)="sendServices()" value="Submit" >
               </div>
             </form>
           </div>
-        </div>
-	    </div>
-    </div>
+        </ng-template>
     <!-- IT and freelance Modal -->
-    <div class="modal fade" id="it-freelance-modal">
-      <div class="modal-dialog">
-        <div class="modal-content">
+    <ng-template #content6 let-modal>
           <!-- Modal Header -->
           <div class="modal-header">
             <h4 class="modal-title">IT and freelance</h4>
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+              <span aria-hidden="true">&times;</span>
+            </button>
           </div>
           <!-- Modal body -->
           <div class="modal-body">
@@ -247,7 +261,7 @@
               <div class="form-row align-items-center">
                 <div class="col-auto">
                   <label class="mr-sm-2" for="inlineFormCustomSelect">Choose type of work</label>
-                  <select class="custom-select mr-sm-2" name="type_of_work" required>
+                  <select class="custom-select mr-sm-2" name="type_of_work" [(ngModel)]="services.typeOfWork" required>
                     <option disabled>Please Choose...</option>
                     <option value="Developers">Developers</option>
                     <option value="Designers">Designers</option>
@@ -257,28 +271,30 @@
               </div>
               <div class="form-group text">
                 <label for="Price">Your bid price</label>
-                <input type="text" class="form-control" placeholder="2500 tg" name="cost" required>
+                <input type="text" class="form-control" placeholder="2500 tg" name="cost" [(ngModel)]="services.price" required>
               </div>
               <div class="form-group text">
                 <label for="Comments">Your comments</label>
-                <textarea class="form-control" rows="3" name="comments"></textarea>
+                <textarea class="form-control" rows="3" name="comments" [(ngModel)]="services.comments"></textarea>
+              </div>
+              <div class="form-group text">
+                <label for="Date">Your date</label>
+                <input type="date" class="form-control" name="date" [(ngModel)]="services.date" required>              
               </div>
               <div class="col-auto" id="submit-button">
-                <button type="submit" class="btn btn-primary" name="sbm">Submit</button>
+                <input type="submit" class="btn btn-primary" name="sbm"  (click)="modal.dismiss('Cross click')" (click)="sendServices()" value="Submit" >
               </div>
             </form>
           </div>
-        </div>
-	    </div>
-    </div>
+        </ng-template>
     <!-- Health and beauty Modal -->
-    <div class="modal fade" id="health-beauty-modal">
-      <div class="modal-dialog">
-        <div class="modal-content">
+    <ng-template #content7 let-modal>
           <!-- Modal Header -->
           <div class="modal-header">
             <h4 class="modal-title">Health and beauty</h4>
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+              <span aria-hidden="true">&times;</span>
+            </button>
           </div>
           <!-- Modal body -->
           <div class="modal-body">
@@ -286,7 +302,7 @@
               <div class="form-row align-items-center">
                 <div class="col-auto">
                   <label class="mr-sm-2" for="inlineFormCustomSelect">Choose type of work</label>
-                  <select class="custom-select mr-sm-2" name="type_of_work" required>
+                  <select class="custom-select mr-sm-2" name="type_of_work" [(ngModel)]="services.typeOfWork" required>
                     <option disabled>Please Choose...</option>
                     <option value="Massage">Massage</option>
                     <option value="Hair removal">Hair removal</option>
@@ -296,28 +312,30 @@
               </div>
               <div class="form-group text">
                 <label for="Price">Your bid price</label>
-                <input type="text" class="form-control" placeholder="2500 tg" name="cost" required>
+                <input type="text" class="form-control" placeholder="2500 tg" name="cost" [(ngModel)]="services.price" required>
               </div>
               <div class="form-group text">
                 <label for="Comments">Your comments</label>
-                <textarea class="form-control" rows="3" name="comments"></textarea>
+                <textarea class="form-control" rows="3" name="comments" [(ngModel)]="services.comments"></textarea>
+              </div>
+              <div class="form-group text">
+                <label for="Date">Your date</label>
+                <input type="date" class="form-control" name="date" [(ngModel)]="services.date" required>              
               </div>
               <div class="col-auto" id="submit-button">
-                <button type="submit" class="btn btn-primary" name="sbm">Submit</button>
+                <input type="submit" class="btn btn-primary" name="sbm"  (click)="modal.dismiss('Cross click')" (click)="sendServices()" value="Submit" >
               </div>
             </form>
           </div>
-        </div>
-	    </div>
-    </div>
+        </ng-template>
     <!-- Business services Modal -->
-    <div class="modal fade" id="business-services-modal">
-      <div class="modal-dialog">
-        <div class="modal-content">
+    <ng-template #content8 let-modal>
           <!-- Modal Header -->
           <div class="modal-header">
             <h4 class="modal-title">Business services</h4>
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+              <span aria-hidden="true">&times;</span>
+            </button>
           </div>
           <!-- Modal body -->
           <div class="modal-body">
@@ -335,20 +353,22 @@
               </div>
               <div class="form-group text">
                 <label for="Price">Your bid price</label>
-                <input type="text" class="form-control" placeholder="2500 tg" name="cost" required>
+                <input type="text" class="form-control" placeholder="2500 tg" name="cost" [(ngModel)]="services.price" required>
               </div>
               <div class="form-group text">
                 <label for="Comments">Your comments</label>
-                <textarea class="form-control" rows="3" name="comments"></textarea>
+                <textarea class="form-control" rows="3" name="comments" [(ngModel)]="services.comments"></textarea>
+              </div>
+              <div class="form-group text">
+                <label for="Date">Your date</label>
+                <input type="date" class="form-control" name="date" [(ngModel)]="services.date" required>              
               </div>
               <div class="col-auto" id="submit-button">
-                <button type="submit" class="btn btn-primary" name="sbm">Submit</button>
+                <input type="submit" class="btn btn-primary" name="sbm"  (click)="modal.dismiss('Cross click')" (click)="sendServices()" value="Submit" >
               </div>
             </form>
           </div>
-        </div>
-	    </div>
-    </div>
+        </ng-template>
 	</div>
   <div id="mainPart">
     <div id="all-services">
@@ -377,7 +397,7 @@
               <div class="card-body">
                 <h5 class="card-title">Interior finish</h5>
                 <p class="card-text">Plasters, painters, tile builders and tilers, etc.</p>
-                <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#interior-finish-modal">Make Request</a>
+                <a  class="btn btn-primary" (click)="open(content2)" style="color: white;">Make Request</a>
               </div>
             </div>
           </div>
@@ -386,7 +406,7 @@
               <div class="card-body">
                 <h5 class="card-title">Machinery and equipment</h5>
                 <p class="card-text">Household, computer, alarm and security, etc.</p>
-                <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#machinery-equipment-modal">Make Request</a>
+                <a class="btn btn-primary" (click)="open(content3)" style="color: white;">Make Request</a>
               </div>
             </div>
           </div>
@@ -395,7 +415,7 @@
               <div class="card-body">
                 <h5 class="card-title">Shipping and Delivery</h5>
                 <p class="card-text">Gazelles, couriers, loaders and garbage collection, etc.</p>
-                <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#shipping-delivery-modal">Make Request</a>
+                <a class="btn btn-primary" (click)="open(content4)" style="color: white;">Make Request</a>
               </div>
             </div>
           </div>
@@ -404,7 +424,7 @@
               <div class="card-body">
                 <h5 class="card-title">Building</h5>
                 <p class="card-text">Welders, workers, roofers and bricklayers, etc.</p>
-                <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#building-modal">Make Request</a>
+                <a class="btn btn-primary" (click)="open(content5)" style="color: white;">Make Request</a>
               </div>
             </div>
           </div>
@@ -413,7 +433,7 @@
               <div class="card-body">
                 <h5 class="card-title">IT and freelance</h5>
                 <p class="card-text">Developers, designers, smm, photographers, etc</p>
-                <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#it-freelance-modal">Make Request</a>
+                <a class="btn btn-primary" (click)="open(content6)" style="color: white;">Make Request</a>
               </div>
             </div>
           </div>
@@ -422,7 +442,7 @@
               <div class="card-body">
                 <h5 class="card-title">Health and beauty</h5>
                 <p class="card-text">Massage, hair removal, care for eyebrows, nails, etc.</p>
-                <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#health-beauty-modal">Make Request</a>
+                <a class="btn btn-primary" (click)="open(content7)" style="color: white;">Make Request</a>
               </div>
             </div>
           </div>
@@ -431,7 +451,7 @@
               <div class="card-body">
                 <h5 class="card-title">Business services</h5>
                 <p class="card-text">Accountants, lawyers, insurers and managers, etc.</p>
-                <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#business-services-modal">Make Request</a>
+                <a class="btn btn-primary" (click)="open(content8)" style="color: white;">Make Request</a>
               </div>
             </div>
           </div>

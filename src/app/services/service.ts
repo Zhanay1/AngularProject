@@ -1,3 +1,4 @@
+
 export class Service {
   typeOfWork!: string;
   price!: number;

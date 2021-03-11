@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
 import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
-import {SpecialistService} from "./specialist.service";
-import {Service} from "./service";
+import {SpecialistService} from "../specialist.service";
+import {Service} from "../services/service";
+// import { LoggingService } from '../logging.service';
 
 @Component({
   selector: 'app-services',
@@ -14,7 +14,9 @@ export class ServicesComponent implements OnInit {
   services: Service = new Service();
 
   constructor(private modalService: NgbModal,
-              private specialistService: SpecialistService) { }
+              private specialistService: SpecialistService,
+              // private loggingService: LoggingService
+              ) { }
 
   open(content: any) {
     this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {
@@ -39,6 +41,8 @@ export class ServicesComponent implements OnInit {
   sendServices(): void{
     console.log("Service " + this.services);
     this.specialistService.setService(this.services);
+    // this.loggingService.log('set services in services.component.ts')
+    this.services = new Service()
   }
 
 }
