@@ -32,7 +32,6 @@ export class HeaderComponent implements OnInit {
     }
   }
 
-
   ngOnInit(): void {
     console.log()
     if(this.route.url === "/for-specialists"){

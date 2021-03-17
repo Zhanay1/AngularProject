@@ -12,7 +12,7 @@ import {Service} from "../services/service";
 export class ServicesComponent implements OnInit {
   closeResult = '';
   services: Service = new Service();
-
+  imagePath = "assets/image.png"
   constructor(private modalService: NgbModal,
               private specialistService: SpecialistService,
               // private loggingService: LoggingService
