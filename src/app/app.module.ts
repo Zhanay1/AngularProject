@@ -12,6 +12,7 @@ import { ForSpecialistsComponent } from './for-specialists/for-specialists.compo
 import {FormsModule} from "@angular/forms";
 import {AppRoutingModule} from "./app-routing.module"
 import { Discount } from './pipes/Discount';
+import { ForSpecialistsGuard } from './for-specialists/for-specialists.guard';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,7 @@ import { Discount } from './pipes/Discount';
     NgbModule,
     FormsModule, 
   ],
-  providers: [],
+  providers:[ ForSpecialistsGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
