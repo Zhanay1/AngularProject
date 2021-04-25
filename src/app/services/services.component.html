@@ -12,7 +12,7 @@
     </div>
           <!-- Modal body -->
           <div class="modal-body">
-            <form action="" method="post" >
+            <form action="" method="post" [formGroup]="angForm" novalidate>
               <div class="form-row align-items-center">
                 <div class="col-auto">
                   <label class="mr-sm-2" for="inlineFormCustomSelect">Choose type of work</label>
@@ -26,18 +26,33 @@
               </div>
               <div class="form-group text">
                 <label for="Price">Your bid price</label>
-                <input type="number" class="form-control" placeholder="2500 tg" name="cost" [(ngModel)]="services.price" required>
+                <input type="number" class="form-control" placeholder="2500 tg" formControlName="price" name="cost" [(ngModel)]="services.price" required>
+              </div>
+              <div *ngIf="angForm.controls['price'].invalid && (angForm.controls['price'].dirty || angForm.controls['price'].touched)" class="alert alert-danger">
+                <div *ngIf="angForm.controls['price'].errors">
+                  Price is required.
+                </div>
               </div>
               <div class="form-group text">
                 <label for="Comments">Your comments</label>
-                <textarea class="form-control" rows="3" name="comments" [(ngModel)]="services.comments"></textarea>
+                <textarea class="form-control" rows="3" formControlName="comments" name="comments" [(ngModel)]="services.comments"></textarea>
+              </div>
+              <div *ngIf="angForm.controls['comments'].invalid && (angForm.controls['comments'].dirty || angForm.controls['comments'].touched)" class="alert alert-danger">
+                <div *ngIf="angForm.controls['comments'].errors">
+                  Comments is required.
+                </div>
               </div>
               <div class="form-group text">
                 <label for="Date">Your date</label>
-                <input type="date" class="form-control" name="date" [(ngModel)]="services.date" required>              
+                <input type="date" class="form-control" formControlName="date" name="date" [(ngModel)]="services.date" required>              
+              </div>
+              <div *ngIf="angForm.controls['date'].invalid && (angForm.controls['date'].dirty || angForm.controls['date'].touched)" class="alert alert-danger">
+                <div *ngIf="angForm.controls['date'].errors">
+                  Date is required.
+                </div>
               </div>
               <div class="col-auto" id="submit-button">
-                <input type="submit" class="btn btn-primary" name="sbm"  (click)="modal.dismiss('Cross click')" (click)="sendServices()" value="Submit" >
+                <input type="submit" class="btn btn-primary" name="sbm" [disabled]="angForm.pristine || angForm.invalid" (click)="modal.dismiss('Cross click')" (click)="sendServices()" value="Submit" >
               </div>
 			      </form>
           </div>
@@ -52,7 +67,7 @@
       </div>
           <!-- Modal body -->
           <div class="modal-body">
-            <form action="" method="post">
+            <form action="" method="post" [formGroup]="angForm" novalidate>
               <div class="form-row align-items-center">
                 <div class="col-auto">
                   <label class="mr-sm-2" for="inlineFormCustomSelect">Choose type of work</label>
@@ -66,18 +81,33 @@
               </div>
               <div class="form-group text">
                 <label for="Price">Your bid price</label>
-                <input type="text" class="form-control" placeholder="2500 tg" name="cost" [(ngModel)]="services.price" required>
+                <input type="number" class="form-control" placeholder="2500 tg" formControlName="price" name="cost" [(ngModel)]="services.price" required>
+              </div>
+              <div *ngIf="angForm.controls['price'].invalid && (angForm.controls['price'].dirty || angForm.controls['price'].touched)" class="alert alert-danger">
+                <div *ngIf="angForm.controls['price'].errors">
+                  Price is required.
+                </div>
               </div>
               <div class="form-group text">
                 <label for="Comments">Your comments</label>
-                <textarea class="form-control" rows="3" name="comments" [(ngModel)]="services.comments"></textarea>
+                <textarea class="form-control" rows="3" formControlName="comments" name="comments" [(ngModel)]="services.comments"></textarea>
+              </div>
+              <div *ngIf="angForm.controls['comments'].invalid && (angForm.controls['comments'].dirty || angForm.controls['comments'].touched)" class="alert alert-danger">
+                <div *ngIf="angForm.controls['comments'].errors">
+                  Comments is required.
+                </div>
               </div>
               <div class="form-group text">
                 <label for="Date">Your date</label>
-                <input type="date" class="form-control" name="date" [(ngModel)]="services.date" required>              
+                <input type="date" class="form-control" formControlName="date" name="date" [(ngModel)]="services.date" required>              
+              </div>
+              <div *ngIf="angForm.controls['date'].invalid && (angForm.controls['date'].dirty || angForm.controls['date'].touched)" class="alert alert-danger">
+                <div *ngIf="angForm.controls['date'].errors">
+                  Date is required.
+                </div>
               </div>
               <div class="col-auto" id="submit-button">
-                <input type="submit" class="btn btn-primary" name="sbm"  (click)="modal.dismiss('Cross click')" (click)="sendServices()" value="Submit" >
+                <input type="submit" class="btn btn-primary" name="sbm" [disabled]="angForm.pristine || angForm.invalid" (click)="modal.dismiss('Cross click')" (click)="sendServices()" value="Submit" >
               </div>
 			      </form>
     </div>
@@ -93,7 +123,7 @@
             </div>
           <!-- Modal body -->
           <div class="modal-body">
-            <form action="" method="post">
+            <form action="" method="post" [formGroup]="angForm" novalidate>
               <div class="form-row align-items-center">
                 <div class="col-auto">
                   <label class="mr-sm-2" for="inlineFormCustomSelect">Choose type of work</label>
@@ -107,18 +137,33 @@
               </div>
               <div class="form-group text">
                 <label for="Price">Your bid price</label>
-                <input type="text" class="form-control" placeholder="2500 tg" name="cost" [(ngModel)]="services.price" required>
+                <input type="number" class="form-control" placeholder="2500 tg" formControlName="price" name="cost" [(ngModel)]="services.price" required>
+              </div>
+              <div *ngIf="angForm.controls['price'].invalid && (angForm.controls['price'].dirty || angForm.controls['price'].touched)" class="alert alert-danger">
+                <div *ngIf="angForm.controls['price'].errors">
+                  Price is required.
+                </div>
               </div>
               <div class="form-group text">
                 <label for="Comments">Your comments</label>
-                <textarea class="form-control" rows="3" name="comments" [(ngModel)]="services.comments"></textarea>
+                <textarea class="form-control" rows="3" formControlName="comments" name="comments" [(ngModel)]="services.comments"></textarea>
+              </div>
+              <div *ngIf="angForm.controls['comments'].invalid && (angForm.controls['comments'].dirty || angForm.controls['comments'].touched)" class="alert alert-danger">
+                <div *ngIf="angForm.controls['comments'].errors">
+                  Comments is required.
+                </div>
               </div>
               <div class="form-group text">
                 <label for="Date">Your date</label>
-                <input type="date" class="form-control" name="date" [(ngModel)]="services.date" required>              
+                <input type="date" class="form-control" formControlName="date" name="date" [(ngModel)]="services.date" required>              
+              </div>
+              <div *ngIf="angForm.controls['date'].invalid && (angForm.controls['date'].dirty || angForm.controls['date'].touched)" class="alert alert-danger">
+                <div *ngIf="angForm.controls['date'].errors">
+                  Date is required.
+                </div>
               </div>
               <div class="col-auto" id="submit-button">
-                <input type="submit" class="btn btn-primary" name="sbm"  (click)="modal.dismiss('Cross click')" (click)="sendServices()" value="Submit" >
+                <input type="submit" class="btn btn-primary" name="sbm" [disabled]="angForm.pristine || angForm.invalid" (click)="modal.dismiss('Cross click')" (click)="sendServices()" value="Submit" >
               </div>
             </form>
           </div>
@@ -134,7 +179,7 @@
           </div>
           <!-- Modal body -->
           <div class="modal-body">
-            <form action="" method="post">
+            <form action="" method="post" [formGroup]="angForm" novalidate>
               <div class="form-row align-items-center">
                 <div class="col-auto">
                   <label class="mr-sm-2" for="inlineFormCustomSelect">Choose type of work</label>
@@ -148,18 +193,33 @@
               </div>
               <div class="form-group text">
                 <label for="Price">Your bid price</label>
-                <input type="text" class="form-control" placeholder="2500 tg" name="cost" [(ngModel)]="services.price" required>
+                <input type="number" class="form-control" placeholder="2500 tg" formControlName="price" name="cost" [(ngModel)]="services.price" required>
+              </div>
+              <div *ngIf="angForm.controls['price'].invalid && (angForm.controls['price'].dirty || angForm.controls['price'].touched)" class="alert alert-danger">
+                <div *ngIf="angForm.controls['price'].errors">
+                  Price is required.
+                </div>
               </div>
               <div class="form-group text">
                 <label for="Comments">Your comments</label>
-                <textarea class="form-control" rows="3" name="comments" [(ngModel)]="services.comments"></textarea>
+                <textarea class="form-control" rows="3" formControlName="comments" name="comments" [(ngModel)]="services.comments"></textarea>
+              </div>
+              <div *ngIf="angForm.controls['comments'].invalid && (angForm.controls['comments'].dirty || angForm.controls['comments'].touched)" class="alert alert-danger">
+                <div *ngIf="angForm.controls['comments'].errors">
+                  Comments is required.
+                </div>
               </div>
               <div class="form-group text">
                 <label for="Date">Your date</label>
-                <input type="date" class="form-control" name="date" [(ngModel)]="services.date" required>              
+                <input type="date" class="form-control" formControlName="date" name="date" [(ngModel)]="services.date" required>              
+              </div>
+              <div *ngIf="angForm.controls['date'].invalid && (angForm.controls['date'].dirty || angForm.controls['date'].touched)" class="alert alert-danger">
+                <div *ngIf="angForm.controls['date'].errors">
+                  Date is required.
+                </div>
               </div>
               <div class="col-auto" id="submit-button">
-                <input type="submit" class="btn btn-primary" name="sbm"  (click)="modal.dismiss('Cross click')" (click)="sendServices()" value="Submit" >
+                <input type="submit" class="btn btn-primary" name="sbm" [disabled]="angForm.pristine || angForm.invalid" (click)="modal.dismiss('Cross click')" (click)="sendServices()" value="Submit" >
               </div>
             </form>
           </div>
@@ -175,7 +235,7 @@
           </div>
           <!-- Modal body -->
           <div class="modal-body">
-            <form action="" method="post">
+            <form action="" method="post" [formGroup]="angForm" novalidate>
               <div class="form-row align-items-center">
                 <div class="col-auto">
                   <label class="mr-sm-2" for="inlineFormCustomSelect">Choose type of work</label>
@@ -189,18 +249,33 @@
               </div>
               <div class="form-group text">
                 <label for="Price">Your bid price</label>
-                <input type="text" class="form-control" placeholder="2500 tg" name="cost" [(ngModel)]="services.price" required>
+                <input type="number" class="form-control" placeholder="2500 tg" formControlName="price" name="cost" [(ngModel)]="services.price" required>
+              </div>
+              <div *ngIf="angForm.controls['price'].invalid && (angForm.controls['price'].dirty || angForm.controls['price'].touched)" class="alert alert-danger">
+                <div *ngIf="angForm.controls['price'].errors">
+                  Price is required.
+                </div>
               </div>
               <div class="form-group text">
                 <label for="Comments">Your comments</label>
-                <textarea class="form-control" rows="3" name="comments" [(ngModel)]="services.comments"></textarea>
+                <textarea class="form-control" rows="3" formControlName="comments" name="comments" [(ngModel)]="services.comments"></textarea>
+              </div>
+              <div *ngIf="angForm.controls['comments'].invalid && (angForm.controls['comments'].dirty || angForm.controls['comments'].touched)" class="alert alert-danger">
+                <div *ngIf="angForm.controls['comments'].errors">
+                  Comments is required.
+                </div>
               </div>
               <div class="form-group text">
                 <label for="Date">Your date</label>
-                <input type="date" class="form-control" name="date" [(ngModel)]="services.date" required>              
+                <input type="date" class="form-control" formControlName="date" name="date" [(ngModel)]="services.date" required>              
+              </div>
+              <div *ngIf="angForm.controls['date'].invalid && (angForm.controls['date'].dirty || angForm.controls['date'].touched)" class="alert alert-danger">
+                <div *ngIf="angForm.controls['date'].errors">
+                  Date is required.
+                </div>
               </div>
               <div class="col-auto" id="submit-button">
-                <input type="submit" class="btn btn-primary" name="sbm"  (click)="modal.dismiss('Cross click')" (click)="sendServices()" value="Submit" >
+                <input type="submit" class="btn btn-primary" name="sbm" [disabled]="angForm.pristine || angForm.invalid" (click)="modal.dismiss('Cross click')" (click)="sendServices()" value="Submit" >
               </div>
             </form>
           </div>
@@ -216,7 +291,7 @@
           </div>
           <!-- Modal body -->
           <div class="modal-body">
-            <form action="" method="post">
+            <form action="" method="post" [formGroup]="angForm" novalidate>
               <div class="form-row align-items-center">
                 <div class="col-auto">
                   <label class="mr-sm-2" for="inlineFormCustomSelect">Choose type of work</label>
@@ -230,18 +305,33 @@
               </div>
               <div class="form-group text">
                 <label for="Price">Your bid price</label>
-                <input type="text" class="form-control" placeholder="2500 tg" name="cost" [(ngModel)]="services.price" required>
+                <input type="number" class="form-control" placeholder="2500 tg" formControlName="price" name="cost" [(ngModel)]="services.price" required>
+              </div>
+              <div *ngIf="angForm.controls['price'].invalid && (angForm.controls['price'].dirty || angForm.controls['price'].touched)" class="alert alert-danger">
+                <div *ngIf="angForm.controls['price'].errors">
+                  Price is required.
+                </div>
               </div>
               <div class="form-group text">
                 <label for="Comments">Your comments</label>
-                <textarea class="form-control" rows="3" name="comments" [(ngModel)]="services.comments"></textarea>
+                <textarea class="form-control" rows="3" formControlName="comments" name="comments" [(ngModel)]="services.comments"></textarea>
+              </div>
+              <div *ngIf="angForm.controls['comments'].invalid && (angForm.controls['comments'].dirty || angForm.controls['comments'].touched)" class="alert alert-danger">
+                <div *ngIf="angForm.controls['comments'].errors">
+                  Comments is required.
+                </div>
               </div>
               <div class="form-group text">
                 <label for="Date">Your date</label>
-                <input type="date" class="form-control" name="date" [(ngModel)]="services.date" required>              
+                <input type="date" class="form-control" formControlName="date" name="date" [(ngModel)]="services.date" required>              
+              </div>
+              <div *ngIf="angForm.controls['date'].invalid && (angForm.controls['date'].dirty || angForm.controls['date'].touched)" class="alert alert-danger">
+                <div *ngIf="angForm.controls['date'].errors">
+                  Date is required.
+                </div>
               </div>
               <div class="col-auto" id="submit-button">
-                <input type="submit" class="btn btn-primary" name="sbm"  (click)="modal.dismiss('Cross click')" (click)="sendServices()" value="Submit" >
+                <input type="submit" class="btn btn-primary" name="sbm" [disabled]="angForm.pristine || angForm.invalid" (click)="modal.dismiss('Cross click')" (click)="sendServices()" value="Submit" >
               </div>
             </form>
           </div>
@@ -257,7 +347,7 @@
           </div>
           <!-- Modal body -->
           <div class="modal-body">
-            <form action="" method="post">
+            <form action="" method="post" [formGroup]="angForm" novalidate>
               <div class="form-row align-items-center">
                 <div class="col-auto">
                   <label class="mr-sm-2" for="inlineFormCustomSelect">Choose type of work</label>
@@ -271,18 +361,33 @@
               </div>
               <div class="form-group text">
                 <label for="Price">Your bid price</label>
-                <input type="text" class="form-control" placeholder="2500 tg" name="cost" [(ngModel)]="services.price" required>
+                <input type="number" class="form-control" placeholder="2500 tg" formControlName="price" name="cost" [(ngModel)]="services.price" required>
+              </div>
+              <div *ngIf="angForm.controls['price'].invalid && (angForm.controls['price'].dirty || angForm.controls['price'].touched)" class="alert alert-danger">
+                <div *ngIf="angForm.controls['price'].errors">
+                  Price is required.
+                </div>
               </div>
               <div class="form-group text">
                 <label for="Comments">Your comments</label>
-                <textarea class="form-control" rows="3" name="comments" [(ngModel)]="services.comments"></textarea>
+                <textarea class="form-control" rows="3" formControlName="comments" name="comments" [(ngModel)]="services.comments"></textarea>
+              </div>
+              <div *ngIf="angForm.controls['comments'].invalid && (angForm.controls['comments'].dirty || angForm.controls['comments'].touched)" class="alert alert-danger">
+                <div *ngIf="angForm.controls['comments'].errors">
+                  Comments is required.
+                </div>
               </div>
               <div class="form-group text">
                 <label for="Date">Your date</label>
-                <input type="date" class="form-control" name="date" [(ngModel)]="services.date" required>              
+                <input type="date" class="form-control" formControlName="date" name="date" [(ngModel)]="services.date" required>              
+              </div>
+              <div *ngIf="angForm.controls['date'].invalid && (angForm.controls['date'].dirty || angForm.controls['date'].touched)" class="alert alert-danger">
+                <div *ngIf="angForm.controls['date'].errors">
+                  Date is required.
+                </div>
               </div>
               <div class="col-auto" id="submit-button">
-                <input type="submit" class="btn btn-primary" name="sbm"  (click)="modal.dismiss('Cross click')" (click)="sendServices()" value="Submit" >
+                <input type="submit" class="btn btn-primary" name="sbm" [disabled]="angForm.pristine || angForm.invalid" (click)="modal.dismiss('Cross click')" (click)="sendServices()" value="Submit" >
               </div>
             </form>
           </div>
@@ -298,7 +403,7 @@
           </div>
           <!-- Modal body -->
           <div class="modal-body">
-            <form action="" method="post">
+            <form action="" method="post" [formGroup]="angForm" novalidate>
               <div class="form-row align-items-center">
                 <div class="col-auto">
                   <label class="mr-sm-2" for="inlineFormCustomSelect">Choose type of work</label>
@@ -312,18 +417,33 @@
               </div>
               <div class="form-group text">
                 <label for="Price">Your bid price</label>
-                <input type="text" class="form-control" placeholder="2500 tg" name="cost" [(ngModel)]="services.price" required>
+                <input type="number" class="form-control" placeholder="2500 tg" formControlName="price" name="cost" [(ngModel)]="services.price" required>
+              </div>
+              <div *ngIf="angForm.controls['price'].invalid && (angForm.controls['price'].dirty || angForm.controls['price'].touched)" class="alert alert-danger">
+                <div *ngIf="angForm.controls['price'].errors">
+                  Price is required.
+                </div>
               </div>
               <div class="form-group text">
                 <label for="Comments">Your comments</label>
-                <textarea class="form-control" rows="3" name="comments" [(ngModel)]="services.comments"></textarea>
+                <textarea class="form-control" rows="3" formControlName="comments" name="comments" [(ngModel)]="services.comments"></textarea>
+              </div>
+              <div *ngIf="angForm.controls['comments'].invalid && (angForm.controls['comments'].dirty || angForm.controls['comments'].touched)" class="alert alert-danger">
+                <div *ngIf="angForm.controls['comments'].errors">
+                  Comments is required.
+                </div>
               </div>
               <div class="form-group text">
                 <label for="Date">Your date</label>
-                <input type="date" class="form-control" name="date" [(ngModel)]="services.date" required>              
+                <input type="date" class="form-control" formControlName="date" name="date" [(ngModel)]="services.date" required>              
+              </div>
+              <div *ngIf="angForm.controls['date'].invalid && (angForm.controls['date'].dirty || angForm.controls['date'].touched)" class="alert alert-danger">
+                <div *ngIf="angForm.controls['date'].errors">
+                  Date is required.
+                </div>
               </div>
               <div class="col-auto" id="submit-button">
-                <input type="submit" class="btn btn-primary" name="sbm"  (click)="modal.dismiss('Cross click')" (click)="sendServices()" value="Submit" >
+                <input type="submit" class="btn btn-primary" name="sbm" [disabled]="angForm.pristine || angForm.invalid" (click)="modal.dismiss('Cross click')" (click)="sendServices()" value="Submit" >
               </div>
             </form>
           </div>
@@ -339,7 +459,7 @@
           </div>
           <!-- Modal body -->
           <div class="modal-body">
-            <form action="" method="post">
+            <form action="" method="post" [formGroup]="angForm" novalidate>
               <div class="form-row align-items-center">
                 <div class="col-auto">
                   <label class="mr-sm-2" for="inlineFormCustomSelect">Choose type of work</label>
@@ -353,18 +473,33 @@
               </div>
               <div class="form-group text">
                 <label for="Price">Your bid price</label>
-                <input type="text" class="form-control" placeholder="2500 tg" name="cost" [(ngModel)]="services.price" required>
+                <input type="number" class="form-control" placeholder="2500 tg" formControlName="price" name="cost" [(ngModel)]="services.price" required>
+              </div>
+              <div *ngIf="angForm.controls['price'].invalid && (angForm.controls['price'].dirty || angForm.controls['price'].touched)" class="alert alert-danger">
+                <div *ngIf="angForm.controls['price'].errors">
+                  Price is required.
+                </div>
               </div>
               <div class="form-group text">
                 <label for="Comments">Your comments</label>
-                <textarea class="form-control" rows="3" name="comments" [(ngModel)]="services.comments"></textarea>
+                <textarea class="form-control" rows="3" formControlName="comments" name="comments" [(ngModel)]="services.comments"></textarea>
+              </div>
+              <div *ngIf="angForm.controls['comments'].invalid && (angForm.controls['comments'].dirty || angForm.controls['comments'].touched)" class="alert alert-danger">
+                <div *ngIf="angForm.controls['comments'].errors">
+                  Comments is required.
+                </div>
               </div>
               <div class="form-group text">
                 <label for="Date">Your date</label>
-                <input type="date" class="form-control" name="date" [(ngModel)]="services.date" required>              
+                <input type="date" class="form-control" formControlName="date" name="date" [(ngModel)]="services.date" required>              
+              </div>
+              <div *ngIf="angForm.controls['date'].invalid && (angForm.controls['date'].dirty || angForm.controls['date'].touched)" class="alert alert-danger">
+                <div *ngIf="angForm.controls['date'].errors">
+                  Date is required.
+                </div>
               </div>
               <div class="col-auto" id="submit-button">
-                <input type="submit" class="btn btn-primary" name="sbm"  (click)="modal.dismiss('Cross click')" (click)="sendServices()" value="Submit" >
+                <input type="submit" class="btn btn-primary" name="sbm" [disabled]="angForm.pristine || angForm.invalid" (click)="modal.dismiss('Cross click')" (click)="sendServices()" value="Submit" >
               </div>
             </form>
           </div>

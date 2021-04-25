@@ -13,6 +13,8 @@ import {FormsModule} from "@angular/forms";
 import {AppRoutingModule} from "./app-routing.module"
 import { Discount } from './pipes/Discount';
 import { ForSpecialistsGuard } from './for-specialists/for-specialists.guard';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { ForSpecialistsGuard } from './for-specialists/for-specialists.guard';
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    FormsModule, 
+    FormsModule,
+    HttpClientModule,
+    ReactiveFormsModule 
   ],
   providers:[ ForSpecialistsGuard],
   bootstrap: [AppComponent]

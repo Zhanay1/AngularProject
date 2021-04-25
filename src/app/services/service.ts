@@ -1,8 +1,9 @@
 
 export class Service {
+  id!: string;
   typeOfWork!: string;
-  price!: number;
+  price!: string;
   comments!: string;
-  date!: Date
+  date!: Date;
 }
 
