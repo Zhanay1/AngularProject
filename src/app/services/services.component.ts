@@ -3,7 +3,6 @@ import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 import {SpecialistService} from "../specialist.service";
 import {Service} from "../services/service";
 import { FormGroup,  FormBuilder,  Validators } from '@angular/forms';
-import {RestService} from "../rest.service"
 // import { LoggingService } from '../logging.service';
 
 @Component({
@@ -18,8 +17,7 @@ export class ServicesComponent implements OnInit {
   angForm!: FormGroup;
   constructor(private modalService: NgbModal,
               private specialistService: SpecialistService,
-              private fb: FormBuilder, 
-              private rs: RestService ) 
+              private fb: FormBuilder ) 
               {
               this.createForm();}        
                
