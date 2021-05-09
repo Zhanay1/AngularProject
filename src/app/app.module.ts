@@ -6,15 +6,12 @@ import { FooterComponent } from './footer/footer.component';
 import { ServicesComponent } from './services/services.component';
 import { AnswerComponent } from './answer/answer.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import {NgbModalModule} from '@ng-bootstrap/ng-bootstrap';
-import { RouterModule } from '@angular/router';
-import { ForSpecialistsComponent } from './for-specialists/for-specialists.component';
 import {FormsModule} from "@angular/forms";
 import {AppRoutingModule} from "./app-routing.module"
-import { Discount } from './pipes/Discount';
 import { ForSpecialistsGuard } from './for-specialists/for-specialists.guard';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { ForSpecialistModule } from './for-specialist/for-specialist.module';
 
 @NgModule({
   declarations: [
@@ -22,9 +19,7 @@ import { HttpClientModule } from '@angular/common/http';
     HeaderComponent,
     FooterComponent,
     ServicesComponent,
-    AnswerComponent,
-    ForSpecialistsComponent, 
-    Discount
+    AnswerComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +27,8 @@ import { HttpClientModule } from '@angular/common/http';
     NgbModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule 
+    ReactiveFormsModule, 
+    ForSpecialistModule
   ],
   providers:[ ForSpecialistsGuard],
   bootstrap: [AppComponent]

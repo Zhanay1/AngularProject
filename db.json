@@ -2,44 +2,44 @@
 "Orders" : [{  
     "id": 1, 
     "typeOfWork": "Cooking",
-    "price": "2500tg",  
+    "price": 2500,  
     "comments": "Cooking", 
     "date": "Apr 30, 2021"
 }, {  
     "id": 2,  
-    "typeOfWork": "Cooking",
-    "price": "2500tg",  
-    "comments": "Cooking", 
-    "date": "Apr 30, 2021"  
+    "typeOfWork": "Babysitters",
+    "price": 3600,  
+    "comments": "Babysitters", 
+    "date": "Apr 20, 2021"  
 }, {  
     "id": 3,  
-    "typeOfWork": "Cooking",
-    "price": "2500tg",  
-    "comments": "Cooking", 
-    "date": "Apr 30, 2021"  
+    "typeOfWork": "Cleaning",
+    "price": 3000,  
+    "comments": "Cleaning", 
+    "date": "May 1, 2021"  
 }, {  
     "id": 4,  
-    "typeOfWork": "Cooking",
-    "price": "2500tg",  
-    "comments": "Cooking", 
-    "date": "Apr 30, 2021"  
+    "typeOfWork": "Plumbers",
+    "price": 4500,  
+    "comments": "Plumbers", 
+    "date": "Sept 10, 2021"  
 }, {  
     "id": 5,  
-    "typeOfWork": "Cooking",
-    "price": "2500tg",  
-    "comments": "Cooking", 
-    "date": "Apr 30, 2021"  
+    "typeOfWork": "Electricians",
+    "price": 4000,  
+    "comments": "Electricians", 
+    "date": "Nov 12, 2021"  
 }, {  
     "id": 6,  
-    "typeOfWork": "Cooking",
-    "price": "2500tg",  
-    "comments": "Cooking", 
-    "date": "Apr 30, 2021"  
+    "typeOfWork": "Plasters",
+    "price": 8000,  
+    "comments": "Plasters", 
+    "date": "Jan 08, 2021"  
 }, {  
     "id": 7,  
-    "typeOfWork": "Cooking",
-    "price": "2500tg",  
-    "comments": "Cooking", 
+    "typeOfWork": "Roofers",
+    "price": 4300,  
+    "comments": "Roofers", 
     "date": "Apr 30, 2021"  
 }]  
 } 

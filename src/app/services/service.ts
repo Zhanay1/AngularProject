@@ -1,6 +1,6 @@
 
 export class Service {
-  id!: string;
+  id!: number;
   typeOfWork!: string;
   price!: number;
   comments!: string;

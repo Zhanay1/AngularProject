@@ -3,6 +3,7 @@ import {Component, OnInit} from '@angular/core';
 import {Service} from '../services/service';
 import {SpecialistService} from '../specialist.service';
 import {Observable} from "rxjs";
+
 @Component({
   selector: 'app-for-specialists',
   templateUrl: './for-specialists.component.html',
@@ -18,9 +19,13 @@ export class ForSpecialistsComponent implements OnInit {
   }
 
   services: Service[] = []
+  servicesDB: Service[] = []
 
   ngOnInit(): void {
-    this.services = this.specialistService.getService();
+    this.servicesDB = this.specialistService.getService(); 
+    this.specialistService.getServiceData()
+      .subscribe(data => {
+        this.services = data});
     // this.loggingService.log('get services in for-specialists.components.ts')
     console.log(this.services)
   }
